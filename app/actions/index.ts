@@ -4,6 +4,7 @@ import prisma from '@/lib/db';
 import { Prisma } from '@prisma/client';
 import { revalidatePath } from 'next/cache';
 
+// create post action
 export async function createNewPost(formdata: FormData) {
   const useremail = 'boby@gmail.com';
 
