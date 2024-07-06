@@ -1,4 +1,4 @@
-import prisma from '@/db/db';
+import prisma from '@/lib/db';
 
 export default async function PostdetailsPage({
   params,
