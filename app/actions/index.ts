@@ -8,8 +8,8 @@ export async function createNewPost(formdata: FormData) {
   const useremail = 'boby@gmail.com';
 
   const postData = {
-    title: formdata.get('title'),
-    content: formdata.get('content'),
+    title: formdata.get('title') as string,
+    content: formdata.get('content') as string,
   };
   console.log(postData);
   try {
