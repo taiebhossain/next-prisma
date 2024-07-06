@@ -1,6 +1,10 @@
-import prisma from '@/lib/db';
+import prisma from '@/db/db';
 
-export default async function PostdetailsPage({ params: { postId } }) {
+export default async function PostdetailsPage({
+  params,
+}: {
+  params: { postId: string };
+}) {
   const post = await prisma.post.findUnique({ where: { id: postId } });
   return (
     <div className='flex flex-col items-center p-20'>

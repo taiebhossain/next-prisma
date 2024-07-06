@@ -11,6 +11,10 @@ export async function createNewPost(formdata: FormData) {
     title: formdata.get('title') as string,
     content: formdata.get('content') as string,
   };
+
+  if (typeof title !== 'string' || typeof content !== 'string') {
+    throw new Error('Form data is not valid.');
+  }
   console.log(postData);
   try {
     const newpost = await prisma.post.create({
