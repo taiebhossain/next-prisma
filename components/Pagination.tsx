@@ -1,9 +1,13 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 interface PaginationProps {
   page: number;
 }
-export default function Pagination<PaginationProps>({ page: number }) {
+
+export default function Pagination({ page }: PaginationProps) {
+  const router = useRouter();
   return (
     <div className='flex gap-36 mt-10'>
       <button
