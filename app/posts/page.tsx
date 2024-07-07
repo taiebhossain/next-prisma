@@ -17,7 +17,7 @@ export default async function PostsListPage() {
             </Link>
           ))}
         </div>
-        <Pagination page='1' />
+        <Pagination page={1} />
       </div>
       <div className=''>
         <h2 className='text-2xl font-bold mb-5'>Create new post</h2>
