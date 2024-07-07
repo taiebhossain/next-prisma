@@ -3,9 +3,13 @@ import prisma from '@/lib/db';
 export default async function PostdetailsPage({
   params,
 }: {
-  params: { postId: string };
+  params: { id: string };
 }) {
-  const post = await prisma.post.findUnique({ where: { id: postId } });
+  const post = await prisma.post.findUnique({
+    where: {
+      id,
+    },
+  });
   return (
     <div className='flex flex-col items-center p-20'>
       <div className='rounded p-8'>
