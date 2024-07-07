@@ -1,6 +1,6 @@
 'use client';
 
-export default function Pagination({ page }) {
+export default function Pagination<PaginationProps>({ page: number }) {
   return (
     <div className='flex gap-36 mt-10'>
       <button
