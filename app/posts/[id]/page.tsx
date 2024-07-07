@@ -5,9 +5,10 @@ export default async function PostdetailsPage({
 }: {
   params: { id: string };
 }) {
+  const postId = params.id;
   const post = await prisma.post.findUnique({
     where: {
-      id: id,
+      id: postId,
     },
   });
   return (
